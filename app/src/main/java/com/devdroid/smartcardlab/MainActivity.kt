@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val whatsapp:ImageView=findViewById(R.id.whatsapp_id)
         val github:ImageView=findViewById(R.id.github_id)
         val instagram:ImageView=findViewById(R.id.insta_id)
+        val telegram:ImageView=findViewById(R.id.tele_id)
         val qr_code:ImageView=findViewById(R.id.qr_id)
 
         email.setOnClickListener {
@@ -57,16 +58,19 @@ class MainActivity : AppCompatActivity() {
             intent_qr.data=Uri.parse("https://www.apple.com")
             startActivity(intent_qr)
         }
+
         whatsapp.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(
-                        "https://api.whatsapp.com/send?phone=+8801733173521&text=How are you Choyon "
-                    )
-                )
-            )
+            val intent_whats=Intent(Intent.ACTION_VIEW)
+            intent_whats.data=Uri.parse("https://api.whatsapp.com/send?phone=+8801733173521&text=How are you Choyon")
+            startActivity(intent_whats)
         }
+
+        telegram.setOnClickListener {
+            val intent_tele=Intent(Intent.ACTION_VIEW)
+            intent_tele.data=Uri.parse("https://t.me/ChoyonSarker?start")
+            startActivity(intent_tele)
+        }
+
         instagram.setOnClickListener {
             val intent_instagram=Intent(Intent.ACTION_VIEW)
             intent_instagram.data=Uri.parse("https://www.instagram.com/ch_oyo_n/")

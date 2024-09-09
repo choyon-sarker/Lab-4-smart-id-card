@@ -244,7 +244,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="260dp"
+        android:layout_width="280dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
         app:cardCornerRadius="20dp"
@@ -290,12 +290,19 @@
                 android:layout_height="26dp"
                 android:layout_marginLeft="16dp"
                 android:src="@drawable/instagram" />
+            <ImageView
+                android:id="@+id/tele_id"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/telegram" />
 
             <ImageView
                 android:id="@+id/qr_id"
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/baseline_qr_code_2_24" />
         </LinearLayout>
 
